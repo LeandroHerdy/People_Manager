@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'apps.company',
     'apps.employee',
     'apps.departament',
+    'apps.overtime',
 ]
 
 MIDDLEWARE = [
