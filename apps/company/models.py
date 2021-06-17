@@ -1,4 +1,9 @@
 from django.db import models
+from django.urls import reverse
+
+
+def get_absolute_url():
+    return reverse('home')
 
 
 class Company(models.Model):
@@ -6,3 +11,4 @@ class Company(models.Model):
 
     def __str__(self):
         return self.name
+
