@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block main %}
+    <h1>List Overtime</h1>
+<br>
+    {% if not object_list  %}
+        <h3>Funcionário sem hora extra</h3>
+    {% endif %}
+
+    {% for overtime in object_list %}
+        <a href="{% url 'update_overtime' overtime.id %}"> {{ overtime }} </a>
+        <a href="{% url 'delete_overtime' overtime.id %}" class="btn btn-danger"> Deletar </a>
+        <br>
+    {% endfor %}
+    <a href="{% url 'create_overtime' %}" class="btn btn-success"> Novo </a>
+{% endblock %}

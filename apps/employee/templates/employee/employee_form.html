@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block main %}
+    Edit
+
+    {{ object }}
+<form method="POST">
+    {% csrf_token %}
+    {{ form }}
+    <button type="submit" class="btn btn-main">Salvar</button>
+</form>
+<br>
+<a href=" {% url 'create_document' object.id %}" class="btn btn-success">Adicionar Documento</a>
+<br>
+{% for document in object.document_set.all %}
+    <a href="{{ document.archive.url }}"> {{ document.description }} </a><br>
+{% endfor %}
+{% endblock %}
