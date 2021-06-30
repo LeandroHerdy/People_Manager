@@ -1,16 +1,12 @@
 {% extends 'base.html' %}
-
+{% load bootstrap %}
 {% block main %}
     Edit Overtime
 
     {{ object }}
 <form method="POST">
     {% csrf_token %}
-    {{ form.employee }}
-    <br>
-    {{ form.remark }}
-    <br>
-    {{ form.hour }}
+    {{ form|bootstrap }}
     <button type="submit" class="btn btn-success">Salvar</button>
     {% if object %}
         <a href="{% url 'delete_overtime' object.id %}" class="btn btn-danger"> Deletar </a>
