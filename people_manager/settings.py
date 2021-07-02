@@ -90,7 +90,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'OPTIONS': {
-            'read_default_file': '/tutorial/auth/mysql.cnf',
+            'read_default_file': '/People_Manger/mysql.cnf',
         },
     }
 }
