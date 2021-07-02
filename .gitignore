@@ -3,4 +3,4 @@
 venv
 __pycache__/
 *.pyc
-people_manager.pem
+aws-key-people_manager.pem

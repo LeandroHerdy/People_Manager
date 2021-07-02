@@ -24,7 +24,7 @@ SECRET_KEY = 'django-insecure-eicy2^*1v-t_8nqr+5x-fmadr5r96-_4e_p57q3%d5bjpm^#ze
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['18.117.55.174']
+ALLOWED_HOSTS = ['18.116.38.191']
 
 # Application definition
 
@@ -77,12 +77,21 @@ WSGI_APPLICATION = 'people_manager.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.mysql',
+#        'NAME': 'people_manager',
+#        'USER': 'root',
+#        'PASSWORD': 'admi',
+#    }
+#}
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'people_manager',
-        'USER': 'root',
-        'PASSWORD': 'admi',
+        'OPTIONS': {
+            'read_default_file': '/tutorial/auth/mysql.cnf',
+        },
     }
 }
 
