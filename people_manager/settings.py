@@ -90,7 +90,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'OPTIONS': {
-            'read_default_file': 'People_Manager/mysql.cnf',
+            'read_default_file': 'People_Manager/people_manager/mysql.cnf',
         },
     }
 }
