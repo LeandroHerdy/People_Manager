@@ -24,7 +24,7 @@ SECRET_KEY = 'django-insecure-eicy2^*1v-t_8nqr+5x-fmadr5r96-_4e_p57q3%d5bjpm^#ze
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['3.16.10.150']
+ALLOWED_HOSTS = ['3.15.216.109']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -88,7 +88,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'OPTIONS': {
-            'read_default_file': 'tutorial/django/mysql.cnf',
+            'read_default_file': 'manage/auth/mysql.cnf',
         },
     }
 }
