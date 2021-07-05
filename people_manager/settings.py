@@ -75,14 +75,14 @@ WSGI_APPLICATION = 'people_manager.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-#DATABASES = {
+# DATABASES = {
 #    'default': {
 #        'ENGINE': 'django.db.backends.mysql',
 #        'NAME': 'people_manager',
 #        'USER': 'root',
 #        'PASSWORD': 'admi',
 #    }
-#}
+# }
 
 DATABASES = {
     'default': {
@@ -126,9 +126,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-#STATICFILES_DIRS = [
+# STATICFILES_DIRS = [
 #    os.path.join(BASE_DIR, "static")
-#]
+# ]
 
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
@@ -144,4 +144,3 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_REDIRECT_URL = 'home'
 
 LOGOUT_REDIRECT_URL = 'login'
-
