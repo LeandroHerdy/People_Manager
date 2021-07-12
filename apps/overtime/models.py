@@ -9,7 +9,7 @@ class Overtime(models.Model):
     hour = models.DecimalField(max_digits=5, decimal_places=2)
 
     def get_absolute_url(self):
-        return reverse('update_overtime', args=[self.id])
+        return reverse('update_employee', args=[self.employee.id])
 
     def __str__(self):
         return self.remark

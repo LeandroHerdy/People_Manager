@@ -4,3 +4,11 @@ venv
 __pycache__/
 *.pyc
 aws-key-people_manager.pem
+media
+static
+uwsgi.ini
+uwsgi_params
+*.bak
+*.dat
+*.pid
+*.dir

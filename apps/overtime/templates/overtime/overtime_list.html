@@ -8,7 +8,7 @@
     {% endif %}
 
     {% for overtime in object_list %}
-        <a href="{% url 'update_overtime' overtime.id %}"> {{ overtime }} </a>
+        <a href="{% url 'update_overtime_base' overtime.id %}" class="btn btn-danger"> {{ report_button }} </a>
         <a href="{% url 'delete_overtime' overtime.id %}" class="btn btn-danger"> Deletar </a>
         <br>
     {% endfor %}

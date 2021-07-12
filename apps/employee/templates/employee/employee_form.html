@@ -8,11 +8,27 @@
     {% csrf_token %}
     {{ form|bootstrap }}
     <button type="submit" class="btn btn-main">Salvar</button>
+<br>
 </form>
-<br>
-<a href=" {% url 'create_document' object.id %}" class="btn btn-success">Adicionar Documento</a>
-<br>
+<h2>Documents</h2>
+<ul>
 {% for document in object.document_set.all %}
-    <a href="{{ document.archive.url }}"> {{ document.description }} </a><br>
+    <li>
+        <a href="{{ document.archive.url }}"> {{ document.description }} </a>
+    </li>
 {% endfor %}
+<a href=" {% url 'create_document' object.id %}" class="btn btn-success">Adicionar Documento</a>
+</ul>
+
+<h2>Banco de Horas</h2>
+<ul>
+{% for register in object.overtime_set.all %}
+    <li>
+        <a href="{% url 'update_overtime' register.id %}">
+            {{ register.remark }} | {{ register.hour }} <br>
+        </a>
+    </li>
+{% endfor %}
+<h3>Total de horas extras: {{ object.total_hour }} </h3>
+</ul>
 {% endblock %}
